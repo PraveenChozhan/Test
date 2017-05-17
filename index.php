@@ -2,7 +2,7 @@
 session_start();
 ob_start();
 /* config settings */
-$base = "https://www.youtube.com/";  //set this to the url you want to scrape
+$base = "https://www.facebook.com/";  //set this to the url you want to scrape
 $ckfile = '/tmp/simpleproxy-cookie-'.session_id();  //this can be set to anywhere you fancy!  just make sure it is secure.
 /* all system code happens below - you should not need to edit it! */
 //work out cookie domain
